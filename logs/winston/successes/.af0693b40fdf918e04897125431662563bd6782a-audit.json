@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\successes\\.af0693b40fdf918e04897125431662563bd6782a-audit.json",
+    "files": [
+        {
+            "date": 1689422752005,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\successes\\phu-2023-15-07-18-success.log",
+            "hash": "94a19cfc28bd363b3acade6cd66d20af8077c07f4549ef7c5eafb0d910d251c5"
+        },
+        {
+            "date": 1689448339655,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\successes\\phu-2023-16-07-01-success.log",
+            "hash": "841f6565b1c8fff9d45f8e36532ceb2232dda0e4e50f1dd2d4c8bf5e59d49f2b"
+        },
+        {
+            "date": 1689451307470,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\successes\\phu-2023-16-07-02-success.log",
+            "hash": "6f19529fa395efb14e0ac1e97ce93eff02e79fc6e81f5dd1beaf78ceab07bb0a"
+        },
+        {
+            "date": 1689454869523,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\successes\\phu-2023-16-07-03-success.log",
+            "hash": "3369fa2bbdf0e0f945e65667b6193f99071d789f5fe19523a062484f183b02a2"
+        }
+    ],
+    "hashType": "sha256"
+}
