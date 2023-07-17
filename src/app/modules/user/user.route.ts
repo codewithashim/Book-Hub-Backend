@@ -4,7 +4,6 @@ import { UserController } from './user.controller';
 import { createUserValidator } from './user.validation';
 
 const router = express.Router();
-
 router.post(
   '/create-user',
   validateRequest(createUserValidator.createUserZodSchema),

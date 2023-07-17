@@ -37,4 +37,4 @@ const bookSchema = new Schema<IBook, Record<string, never>>(
   }
 );
 
-export const Books = model<IBook, BookModel>('Books', bookSchema);
+export const Book = model<IBook, BookModel>('Books', bookSchema);
