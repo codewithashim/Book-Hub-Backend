@@ -2,7 +2,7 @@ import { Model } from 'mongoose';
 
 export type IUser = {
   userName: string;
-  userProfile: string;
+  userProfile?: string;
 };
 
 export type IReview = {
@@ -10,15 +10,17 @@ export type IReview = {
   comment: string;
 };
 
+export type IStatus = 'reading' | 'plan to read' | 'finish reading' | 'none';
+
 export type IBook = Document & {
-  status: string;
+  status?: IStatus;
   title: string;
   description: string;
   author: string;
   genre: string;
   publicationYear: string;
   image: string;
-  reviews: IReview[];
+  reviews?: IReview[];
 };
 
 export type BookModel = Model<IBook, Record<string, unknown>>;

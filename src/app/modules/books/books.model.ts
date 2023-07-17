@@ -1,23 +1,26 @@
 import { Schema, model } from 'mongoose';
 import { BookModel, IBook, IReview } from './books.interface';
+import { bookStatus } from './books.constant';
 
 const reviewSchema = new Schema<IReview, Record<string, never>>(
   {
     user: {
-      userName: { type: String, required: true },
-      userProfile: { type: String, required: true },
+      userName: { type: String },
+      userProfile: { type: String },
     },
-    comment: { type: String, required: true },
+    comment: { type: String },
   },
   {
     timestamps: true,
-    toJSON: { virtuals: true },
   }
 );
 
 const bookSchema = new Schema<IBook, Record<string, never>>(
   {
-    status: { type: String, required: true },
+    status: {
+      enum: bookStatus,
+      type: String,
+    },
     title: { type: String, required: true },
     description: { type: String, required: true },
     author: { type: String, required: true },
