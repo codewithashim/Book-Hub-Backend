@@ -6,3 +6,7 @@ export const bookStatus: IStatus[] = [
   'finish reading',
   'none',
 ];
+
+export const iBookFilterableFields = ['searchTerm', 'genre', 'publicationYear'];
+
+export const iBookSearchableFields = ['genre', 'publicationYear'];

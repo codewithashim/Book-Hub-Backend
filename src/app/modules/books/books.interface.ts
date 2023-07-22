@@ -24,3 +24,10 @@ export type IBook = Document & {
 };
 
 export type BookModel = Model<IBook, Record<string, unknown>>;
+
+export type IBooksFilters = {
+  searchTerm?: string;
+  genre?: string;
+  publicationYear?: string;
+};
+
