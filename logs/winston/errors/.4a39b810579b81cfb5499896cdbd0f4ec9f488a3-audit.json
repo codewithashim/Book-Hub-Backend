@@ -59,6 +59,21 @@
             "date": 1690044287075,
             "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\errors\\phu-2023-22-07-22-error.log",
             "hash": "dfdbf535c57b4cc35b28d53c9763bb26eb59fb3fd1875cc8ac14fe823deec0f9"
+        },
+        {
+            "date": 1690045801134,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\errors\\phu-2023-22-07-23-error.log",
+            "hash": "816eec637a9a8adb7c8c528b98c7eb4884425e602f15ec803d8c17fa9fb7d71d"
+        },
+        {
+            "date": 1690051316157,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\errors\\phu-2023-23-07-00-error.log",
+            "hash": "a76e26de8f1e447e6b41234838e1687680c917cfd48acc872af65b4639010328"
+        },
+        {
+            "date": 1690052596981,
+            "name": "C:\\WebDevelopmentDrive\\Programming Hero\\Assignments\\Book Store\\Backend\\logs\\winston\\errors\\phu-2023-23-07-01-error.log",
+            "hash": "3104aa2a2d5acb5cfa7a5b2d44346c72a7d062838bd648424b8a29f7620001ce"
         }
     ],
     "hashType": "sha256"

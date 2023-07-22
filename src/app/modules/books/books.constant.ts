@@ -9,4 +9,4 @@ export const bookStatus: IStatus[] = [
 
 export const iBookFilterableFields = ['searchTerm', 'genre', 'publicationYear'];
 
-export const iBookSearchableFields = ['genre', 'publicationYear'];
+export const iBookSearchableFields = ['title', 'author', 'genre', 'publicationYear'];

@@ -28,6 +28,7 @@ export type BookModel = Model<IBook, Record<string, unknown>>;
 export type IBooksFilters = {
   searchTerm?: string;
   genre?: string;
+  title?: string;
   publicationYear?: string;
 };
 

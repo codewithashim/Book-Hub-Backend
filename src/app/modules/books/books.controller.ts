@@ -21,22 +21,24 @@ const createBook: RequestHandler = catchAsync(
   }
 );
 
-const getAllBook: RequestHandler = catchAsync(
-  async (req: Request, res: Response) => {
-    const filters = pick(req.query, iBookFilterableFields);
-    const paginationOptions = pick(req.query, paginationFields);
+const getAllBook = catchAsync(async (req: Request, res: Response) => {
+  const filters = pick(req.query, iBookFilterableFields);
+  const paginationOptions = pick(req.query, paginationFields);
 
-    const result = await BookService.getAllBook(filters, paginationOptions);
+  const result = await BookService.getAllBook(
+    filters,
+    paginationOptions
+  );
 
-    sendResponse<IBook[]>(res, {
-      statusCode: httpStatus.OK,
-      success: true,
-      message: 'Books fetched successfully!',
-      meta: result.meta,
-      data: result.data,
-    });
-  }
-);
+  sendResponse<IBook[]>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Books fetched successfully',
+    meta: result.meta,
+    data: result.data,
+  });
+});
+
 
 export const BookController = {
   createBook,
