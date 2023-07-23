@@ -19,11 +19,7 @@ const userSchema = new Schema<IUser, Record<string, never>>(
       type: String,
       required: true,
     },
-    password: {
-      type: String,
-      required: true,
-      select: 0,
-    },
+
   },
   {
     timestamps: true,
@@ -33,13 +29,5 @@ const userSchema = new Schema<IUser, Record<string, never>>(
   }
 );
 
-userSchema.pre('save', async function (next) {
-  const user = this;
-  user.password = await bcrypt.hash(
-    user.password,
-    Number(config.bcrypt_salt_round)
-  );
-  next();
-});
 
 export const User = model<IUser, UserModel>('User', userSchema);
