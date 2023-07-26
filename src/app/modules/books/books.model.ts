@@ -4,10 +4,8 @@ import { bookStatus } from './books.constant';
 
 const reviewSchema = new Schema<IReview, Record<string, never>>(
   {
-    user: {
-      userName: { type: String },
-      userProfile: { type: String },
-    },
+    userName: { type: String },
+    userProfile: { type: String },
     comment: { type: String },
   },
   {

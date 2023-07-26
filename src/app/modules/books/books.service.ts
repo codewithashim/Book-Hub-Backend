@@ -91,7 +91,7 @@ const deleteBook = async (id: string): Promise<IBook | null> => {
   return result;
 };
 
-export const reviewBook = async (
+const reviewBook = async (
   bookId: string,
   review: IReview
 ): Promise<IBook | null> => {
