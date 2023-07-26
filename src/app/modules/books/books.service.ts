@@ -1,12 +1,12 @@
-import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
-import { IBook, IBooksFilters } from './books.interface';
-import { Book } from './books.model';
+import { SortOrder } from 'mongoose';
+import ApiError from '../../../errors/ApiError';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { iBookSearchableFields } from './books.constant';
-import { SortOrder } from 'mongoose';
-import { IGenericResponse } from '../../../interfaces/common';
+import { IBook, IBooksFilters, IReview } from './books.interface';
+import { Book } from './books.model';
 
 const createBook = async (payload: IBook): Promise<IBook> => {
   try {
@@ -91,10 +91,31 @@ const deleteBook = async (id: string): Promise<IBook | null> => {
   return result;
 };
 
+export const reviewBook = async (
+  bookId: string,
+  review: IReview
+): Promise<IBook | null> => {
+  try {
+    const book = await Book.findById(bookId);
+    if (!book) {
+      throw new Error('Book not found');
+    }
+    book.reviews?.push(review);
+    await book.save();
+    return book;
+  } catch (error) {
+    throw new ApiError(
+      httpStatus.INTERNAL_SERVER_ERROR,
+      'Internal Server Error'
+    );
+  }
+};
+
 export const BookService = {
   createBook,
   getAllBook,
   getSingleBook,
   updateBook,
   deleteBook,
+  reviewBook,
 };

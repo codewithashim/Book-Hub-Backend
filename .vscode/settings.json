@@ -4,5 +4,6 @@
     "source.fixAll.tslint": true,
     "source.organizeImports": true
   },
-  "githubPullRequests.ignoredPullRequestBranches": ["master-branch"]
+  "githubPullRequests.ignoredPullRequestBranches": ["master-branch"],
+  "liveServer.settings.port": 5501
 }

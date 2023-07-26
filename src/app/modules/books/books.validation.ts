@@ -16,6 +16,7 @@ const bookZodSchema = z.object({
   description: z.string(),
   author: z.string(),
   genre: z.string(),
+  email: z.string(),
   publicationYear: z.string(),
   image: z.string().url(),
   reviews: z.array(reviewZodSchema).optional(),

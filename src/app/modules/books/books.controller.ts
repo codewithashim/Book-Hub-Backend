@@ -2,7 +2,7 @@ import { Request, RequestHandler, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
-import { IBook } from './books.interface';
+import { IBook, IReview } from './books.interface';
 import { BookService } from './books.service';
 import { iBookFilterableFields } from './books.constant';
 import pick from '../../../shared/pick';
@@ -73,10 +73,31 @@ const deleteBooks: RequestHandler = catchAsync(
   }
 );
 
+const reviewBooks: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const bookId: string = req.params.id;
+
+    const review: IReview = {
+      userName: req.body.userName,
+      userProfile: req.body.userProfile,
+      comment: req.body.comment,
+    };
+
+    const result = await BookService.reviewBook(bookId, review);
+    sendResponse<IBook>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Book review successfully!',
+      data: result,
+    });
+  }
+);
+
 export const BookController = {
   createBook,
   getAllBook,
   getSingelBook,
   updateBook,
   deleteBooks,
+  reviewBooks,
 };

@@ -27,6 +27,7 @@ const bookSchema = new Schema<IBook, Record<string, never>>(
     genre: { type: String, required: true },
     publicationYear: { type: String, required: true },
     image: { type: String, required: true },
+    email: { type: String, required: true },
     reviews: [reviewSchema],
   },
   {

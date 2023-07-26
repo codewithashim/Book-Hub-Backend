@@ -9,9 +9,10 @@ router.post(
   validateRequest(createBookValidator.createBookZodSchema),
   BookController.createBook
 );
-router.get('/', BookController.getAllBook);
 router.get('/:id', BookController.getSingelBook);
 router.patch('/:id', BookController.updateBook);
 router.delete('/:id', BookController.deleteBooks);
+router.get('/', BookController.getAllBook);
+router.post('/id/:id/review', BookController.reviewBooks);
 
 export const BookRoutes = router;
