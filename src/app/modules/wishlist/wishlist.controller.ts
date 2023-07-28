@@ -9,6 +9,7 @@ const addToWishlist: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const wishlistData = req.body;
     const result = await WishListService.addToWishlist(wishlistData);
+    
     sendResponse<IWishList>(res, {
       statusCode: httpStatus.OK,
       success: true,
@@ -47,7 +48,7 @@ const getWishlistByUserEmail = catchAsync(
   async (req: Request, res: Response) => {
     const userEmail = req.params.userEmail;
     const result = await WishListService.getWishlistByUserEmail(userEmail);
-    sendResponse<IWishList>(res, {
+    sendResponse<IWishList []>(res, {
       statusCode: httpStatus.OK,
       success: true,
       message: 'Wishlist fetched successfully',

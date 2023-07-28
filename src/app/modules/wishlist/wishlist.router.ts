@@ -1,12 +1,9 @@
 import express from 'express';
 import { WishlistController } from './wishlist.controller';
-import { createBookValidator } from '../books/books.validation';
-import validateRequest from '../../middlewares/validateRequest';
 const router = express.Router();
 
 router.post(
   '/add-to-wishlist',
-  validateRequest(createBookValidator.createBookZodSchema),
   WishlistController.addToWishlist
 );
 

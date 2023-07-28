@@ -65,13 +65,13 @@ const updateWishlist = async (
 
 const getWishlistByUserEmail = async (
   userEmail: string
-): Promise<IWishList> => {
+): Promise<IWishList[]> => {
   try {
-    const user = await WishList.findOne({ userEmail: userEmail });
-    if (!user) {
+    const wishlists = await WishList.find({ userEmail: userEmail });
+    if (wishlists.length === 0) {
       throw new ApiError(httpStatus.NOT_FOUND, 'Wishlist not found');
     }
-    return user;
+    return wishlists;
   } catch (error) {
     throw new ApiError(
       httpStatus.INTERNAL_SERVER_ERROR,
