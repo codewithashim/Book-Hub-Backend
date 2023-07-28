@@ -2,7 +2,7 @@
 
 ### Live Link : https://bookhubs.vercel.app
 
-### API Link :
+### API Link : https://bookhub-server-omega.vercel.app/api/v1
 
 ### GitHub Link For Backend : https://github.com/codewithashim/Book-Hub-Backend
 
